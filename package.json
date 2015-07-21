@@ -1,0 +1,32 @@
+{
+  "name": "little-cache",
+  "description": "In memory cache for ajax requests",
+  "main": "index.js",
+  "version": "0.0.0",
+  "keywords": [
+    "browser",
+    "cache",
+    "store",
+    "memory",
+    "client"
+  ],
+  "browserify": {
+    "transform": []
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -d example/example.js > example/bundle.js",
+    "watch": "watchify example/example.js -o example/bundle.js -dv",
+    "dev": "npm run watch",
+    "demo": "browserify example/example.js > example/bundle.js && html-inline example/index.html | curl -sT- https://htmlb.in"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nichoth/bla.git"
+  },
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+  }
+}
